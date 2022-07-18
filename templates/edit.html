@@ -1,0 +1,27 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Edit
+{% endblock %}
+
+{% block main %}
+<div class="card" style="width: 18rem;background-color:darkgray;display: inline-block;">
+                        <div class="card-body">
+    <form action="/edit"  method="post">
+
+        <div class="form-group">
+            <input autocomplete="off" autofocus class="form-control" name="username" placeholder="Username" type="text">
+        </div>
+        <div class="form-group">
+            <input class="form-control" name="password" placeholder="Password" type="password">
+        </div>
+        <div class="form-group">
+            <input class="form-control" name="re-password" placeholder="Re-enter Password" type="password">
+        </div>
+        <button class="btn btn-primary" type="submit" name="button" value="submit">submit</button>
+        <button class="btn btn-primary" type="submit" name="button" value="cancel">cancel</button>
+
+    </form>
+</div>
+</div>
+{% endblock %}

@@ -1,0 +1,58 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    history
+{% endblock %}
+{% block style%}
+    <style type="text/css">
+
+            .written{
+                height:40px;
+                width:100%;
+                border:2px solid black;
+                float:left;
+            }
+            .table{
+                width:62%;
+                margin-left:16%;
+            }
+        </style>
+{% endblock %}
+{% block main %}
+<form action="/history" method="post">
+<button value="delete" style="display:inline-block;" class="btn btn-primary" name="button">Clear history</button>
+</form>
+
+    <div id="to"><table class="table" >
+  <thead>
+    <tr class="bg-warning">
+        <th scope="col">Action</th>
+        <th scope="col">Title</th>
+        <th scope="col">Status</th>
+        <th scope="col">Time of action</th>
+        <th scope="col"></th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for tab in table %}
+    <tr class="table-secondary">
+        <th scope="row" >{{tab["played"]}}</th>
+        <td>{{tab["title"]}}</td>
+        <td>{{tab["status"]}}</td>
+        <td>{{tab["time"]}}</td>
+        <form action="/history" method="post">
+      <td><button value="{{tab['id']}}"  name="button">playbutton</button></td>
+      </form>
+        </tr>
+        {% endfor %}
+        </tbody>
+
+    </table>
+    </div>
+
+
+
+
+
+
+{% endblock %}

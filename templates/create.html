@@ -1,0 +1,68 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Create Stories
+{% endblock %}
+{% block style%}
+    <style type="text/css">
+
+            .dragzone{
+                height:40px;
+                width:100%;
+                border:2px solid black;
+                float:left;
+            }
+            .table{
+                width:62%;
+                margin-left:16%;
+            }
+
+        </style>
+{% endblock %}
+
+{% block main %}
+
+<form method="post" action="/create">
+   <div class="alert alert-warning" role="alert">
+  Put the key words in a double bracket at the positions they should be at (to see how it should be done you can drag and drop the example key words to the text area).
+</div>
+        <table class="table table-dark">
+            <tr>
+                <td>Title:</td>
+                <td><input type="text" name="title" autocomplete="off" required></td>
+            </tr>
+            <tr>
+                <td>Theme:</td>
+                <td><input type="text" name="theme" autocomplete="off" required></td>
+            </tr>
+
+
+            <tr>
+                <td>Example key words</td>
+                <td class="dragzone">
+
+                    <b  id="noun"  draggable="true" ondragstart="dragStart(event)">noun</b>,
+                    <b id="adjective" draggable="true" ondragstart="dragStart(event)">adjective</b>,
+                    <b  id="aman'sname"  draggable="true" ondragstart="dragStart(event)">a man's name</b>
+
+
+
+
+                </td>
+            </tr>
+            <tr>
+                <td>The story</td>
+                <td>
+                    <textarea cols="30" name="story" ondragover="allowDrop(event)" ondrop="drop(event)" required></textarea>
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td><button class="btn btn-primary" type="submit" name="button" value="private">Create Private</button>
+                <button class="btn btn-primary" type="submit" name="button" value="public">Create Public</button></td>
+
+            </tr>
+        </table>
+    </form>
+    <script src="static/main.js"></script>
+{% endblock %}

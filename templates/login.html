@@ -1,0 +1,22 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Login
+{% endblock %}
+
+
+{% block main %}
+<div class="card" style="width: 18rem;background-color:darkgray;display: inline-block;">
+                        <div class="card-body">
+    <form action="/login" method="post">
+        <div class="form-group">
+            <input autocomplete="off" autofocus class="form-control" name="username" placeholder="username" type="number">
+        </div>
+        <div class="form-group">
+            <input class="form-control" name="password" placeholder="password" type="password">
+        </div>
+        <button class="btn btn-primary" type="submit">log in</button>
+    </form>
+    </div>
+    </div>
+{% endblock %}

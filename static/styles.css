@@ -1,0 +1,78 @@
+html,body{
+    max-width:100%;
+    background: linear-gradient(rgba(0.5,0.6,0.5,0.1),rgba(0.5,0.6,0.5,0.1)), url("https://i.ytimg.com/vi/PKnu4laWgSY/maxresdefault.jpg") no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+
+}
+nav
+{
+    box-shadow:0 1px 4px rgba(0,0,0,0.8), 0 0 40px rgba(0,0,0,0.1) inset;
+}
+.shadow:before,
+.shadow:after{
+    content:'';
+    position:absolute;
+    z-index:-1;
+    box-shadow:0 0 20px rgba(0,0,0,0.8);
+}
+.clearfix{
+    clear: both;
+}
+
+navbar-light .navbar-nav .active>.nav-link, .navbar-light .navbar-nav .nav-link.active, .navbar-light .navbar-nav .nav-link.show, .navbar-light .navbar-nav .show>.nav-link{
+    margin-right:100px;
+}
+.goog-te-banner-frame.skiptranslate {
+   display: none !important;
+}
+body {
+   top: 0px !important;
+}
+
+
+nav .navbar-brand
+{
+    /* size for brand */
+    font-size: xx-large;
+    max-width:100%;
+}
+
+/* colors for brand */
+nav
+{
+    border-radius:5%;
+    position: fixed;
+}
+
+
+
+main .form-control
+{
+    /* center form controls */
+    display: inline-block;
+
+    /* override Bootstrap's 100% width for form controls */
+    width: auto;
+}
+
+
+main
+{
+
+    /* scroll horizontally as needed */
+    overflow-x: auto;
+
+    /* center contents */
+    text-align: center;
+}
+
+main img
+{
+    /* constrain images on small screens */
+    max-width: 100%;
+}
+
+
